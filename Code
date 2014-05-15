@@ -1,0 +1,53 @@
+int led =1;
+int led2 = 2;
+int led3 = 3;
+int led4 = 4;
+int led5 = 6;
+
+void setup(){
+  pinMode(1,OUTPUT);
+  pinMode(2,OUTPUT);
+   pinMode(3,OUTPUT);
+  pinMode(4,OUTPUT);
+   pinMode(5,OUTPUT);
+}
+void speedrate(){
+    digitalWrite(1, HIGH);
+    delay(1000); 
+     digitalWrite(1, LOW);
+    delay(1000); 
+}
+void speedrate2(){
+    digitalWrite(3, HIGH);
+    delay(500); 
+     digitalWrite(3, LOW);
+    delay(500); 
+}
+void speedrate3(){
+    digitalWrite(5, HIGH);
+    delay(100); 
+     digitalWrite(5, LOW);
+    delay(100); 
+}
+  
+     
+   void loop() {
+  
+    if(){
+speedrate();
+    }
+    else if(){
+      
+speedrate2();
+    }
+    else if(){
+      
+speedrate3();
+)
+Serial.println(analogRead(0));
+}
+
+
+
+
+
