@@ -3,51 +3,122 @@ int led2 = 2;
 int led3 = 3;
 int led4 = 4;
 int led5 = 6;
-
+int value = 0;
 void setup(){
-  pinMode(1,OUTPUT);
+  
+   Serial.begin(9600);
+
+  pinMode(6,OUTPUT);
   pinMode(2,OUTPUT);
    pinMode(3,OUTPUT);
   pinMode(4,OUTPUT);
    pinMode(5,OUTPUT);
 }
 void speedrate(){
-    digitalWrite(1, HIGH);
-    delay(1000); 
-     digitalWrite(1, LOW);
-    delay(1000); 
+  for (int i=0; i < 1; i++){
+    digitalWrite(6, HIGH);
+    delay(50); 
+     digitalWrite(6, LOW);
+    delay(50); 
+    digitalWrite(6, HIGH);
+    delay(50); 
+     digitalWrite(6, LOW);
+    delay(50); 
+  }
 }
 void speedrate2(){
-    digitalWrite(3, HIGH);
-    delay(500); 
-     digitalWrite(3, LOW);
-    delay(500); 
+    for (int i=0; i < 1; i++){
+    digitalWrite(2, HIGH);
+    delay(50); 
+     digitalWrite(2, LOW);
+    delay(50); 
+    digitalWrite(2, HIGH);
+    delay(50); 
+     digitalWrite(2, LOW);
+    delay(50); 
+  }
 }
 void speedrate3(){
+    for (int i=0; i < 1; i++){
+    digitalWrite(3, HIGH);
+    delay(50); 
+     digitalWrite(3, LOW);
+    delay(50); 
+    digitalWrite(3, HIGH);
+    delay(50); 
+     digitalWrite(3, LOW);
+    delay(50); 
+  }
+}
+  void speedrate4(){
+    for (int i=0; i < 1; i++){
+    digitalWrite(4, HIGH);
+    delay(50); 
+     digitalWrite(4, LOW);
+    delay(50); 
+    digitalWrite(4, HIGH);
+    delay(50); 
+     digitalWrite(4, LOW);
+    delay(50); 
+  }
+  }
+  void speedrate5(){
+    for (int i=0; i < 1; i++){
     digitalWrite(5, HIGH);
-    delay(100); 
+    delay(50); 
      digitalWrite(5, LOW);
-    delay(100); 
+    delay(50); 
+    digitalWrite(5, HIGH);
+    delay(50); 
+     digitalWrite(5, LOW);
+    delay(50); 
+  }
+  }
+  void speedrate6(){
+    for (int i=0; i < 1; i++){
+    digitalWrite(6, HIGH);
+    delay(50); 
+     digitalWrite(6, LOW);
+    delay(50); 
+    digitalWrite(6, HIGH);
+    delay(50); 
+     digitalWrite(6, LOW);
+    delay(50); 
+  }
 }
   
      
    void loop() {
-  
-    if(){
-speedrate();
-    }
-    else if(){
+     
+     
+     
+  Serial.println(analogRead(0));
+   value = analogRead(0);
+ 
+ 
+  { if(value<=240){
+        speedrate();
+                 }
+    else if(value<=248 && value>240){
       
-speedrate2();
-    }
-    else if(){
+        speedrate2();
+                                    }
+    else if(value<=256 && value>248){
       
-speedrate3();
-)
-Serial.println(analogRead(0));
-}
+        speedrate3();
+                                    }
+    else if(value<=264 && value>256){
+      
+        speedrate4();
+                                    }
+     else if(value<=272 && value>264){
+      
+        speedrate5();
+                                    }  
+       else if(value>280){
+      
+        speedrate6();
+                                    }   
+  }                           
 
-
-
-
-
+   }
